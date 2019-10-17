@@ -13,9 +13,9 @@ const centeredStyles = {
 };
 const h2Styles = {
   fontSize: "82px",
-  color: "white",
-  backgroundColor: "black",
-  padding: "16px 32px"
+  // color: "white",
+  // backgroundColor: "black",
+  // padding: "16px 32px"
 };
 
 const App = () => {
