@@ -1,7 +1,6 @@
-import React from "react";
-import VisibilitySensor from "../components/VisibilitySensor";
-import "./style.css";
-
+import React from "react"
+import VisibilitySensor from "../components/VisibilitySensor"
+import "./style.css"
 
 // styles
 const centeredStyles = {
@@ -9,14 +8,14 @@ const centeredStyles = {
   alignItems: "center",
   justifyContent: "center",
   flexDirection: "column",
-  height: "100%"
-};
+  height: "100%",
+}
 const h2Styles = {
   fontSize: "82px",
   // color: "white",
   // backgroundColor: "black",
   // padding: "16px 32px"
-};
+}
 
 const App = () => {
   return (
@@ -25,7 +24,7 @@ const App = () => {
         style={{
           ...centeredStyles,
           height: "100vh",
-          backgroundColor: "pink"
+          backgroundColor: "pink",
         }}
       >
         <VisibilitySensor>
@@ -45,7 +44,7 @@ const App = () => {
           height: "100vh",
           // be careful not to hide
           // something useful.
-          overflow: "hidden"
+          overflow: "hidden",
         }}
       >
         <VisibilitySensor partialVisibility>
@@ -66,7 +65,7 @@ const App = () => {
           backgroundColor: "#afd4d4",
           // be careful not to hide
           // something useful.
-          overflow: "hidden"
+          overflow: "hidden",
         }}
       >
         <VisibilitySensor partialVisibility offset={{ bottom: -400 }}>
@@ -81,7 +80,7 @@ const App = () => {
         </VisibilitySensor>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

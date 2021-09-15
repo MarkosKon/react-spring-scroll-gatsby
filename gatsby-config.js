@@ -5,5 +5,5 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  flags: { FAST_DEV: true },
 }
