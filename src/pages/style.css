@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .fadeIn {
   transition: opacity 1s ease-in-out;
   opacity: 0;
@@ -16,7 +17,18 @@ body {
 }
 body.no-js .fadeIn {
   opacity: 1;
+  /* You can use an animation when there is no JavaScript. */
+  animation: fadeIn 1s ease-in;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .slideLeft {
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
   opacity: 0;
@@ -32,6 +44,7 @@ body.no-js .slideLeft {
   opacity: 1;
   transform: none;
 }
+
 .slideUp {
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
   opacity: 0;
@@ -47,12 +60,14 @@ body.no-js .slideUp {
   opacity: 1;
   transform: none;
 }
+
 @media (print), (prefers-reduced-motion: reduce) {
-    .fadeIn,
-    .slideLeft,
-    .slideUp {
-      transition: none;
-      opacity: 1;
-      transform: none;
-    }
+  body .fadeIn.fadeIn, /* .fadeIn.fadeIn to bump specificity and beat body.no-js .fadeIn*/
+  .slideLeft,
+  .slideUp {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
   }
+}

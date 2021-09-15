@@ -4,6 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-module.exports = {
+/** @type {import("gatsby").GatsbyConfig} */
+const config = {
   flags: { FAST_DEV: true },
 }
+
+module.exports = config
